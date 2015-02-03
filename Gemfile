@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 gem 'rake'
 gem 'yard'
-gem 'activesupport', "~> 3.0"
+gem 'activesupport', "4.1.9"
 
 group :development do
   gem 'pry'
