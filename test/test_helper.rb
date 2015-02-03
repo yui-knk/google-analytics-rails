@@ -1,5 +1,5 @@
 require "rubygems"
 require "google-analytics-rails"
-require "test/unit"
+require "minitest/autorun"
 
 GA.tracker = "TEST"

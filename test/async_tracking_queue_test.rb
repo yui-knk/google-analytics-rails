@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AsyncTrackingQueueTest < Test::Unit::TestCase
+class AsyncTrackingQueueTest < Minitest::Test
   def teardown
     GoogleAnalytics.script_source = nil
   end

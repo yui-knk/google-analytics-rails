@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GAEventsTest < Test::Unit::TestCase
+class GAEventsTest < Minitest::Test
   def test_set_account_event
     event = GA::Events::SetAccount.new('ABC123')
     assert_equal('_setAccount', event.name)
@@ -62,7 +62,7 @@ class GAEventsTest < Test::Unit::TestCase
   end
 
   def test_set_custom_var_with_invalid_index
-    assert_raise ArgumentError do
+    assert_raises ArgumentError do
       GA::Events::SetCustomVar.new(6, 'VarName1', 'VarVal1', 1)
     end
   end
@@ -74,7 +74,7 @@ class GAEventsTest < Test::Unit::TestCase
   end
 
   def test_delete_custom_var_with_invalid_index
-    assert_raise ArgumentError do
+    assert_raises ArgumentError do
       GA::Events::DeleteCustomVar.new(6)
     end
   end

@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'google-analytics/rails/view_helpers'
 
-class ViewHelpersTest < Test::Unit::TestCase
+class ViewHelpersTest < Minitest::Test
   include GoogleAnalytics::Rails::ViewHelpers
 
   VALID_INIT = <<-JAVASCRIPT

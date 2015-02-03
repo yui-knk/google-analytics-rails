@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class EventRendererTest < Test::Unit::TestCase
+class EventRendererTest < Minitest::Test
   def test_event_renderer_yield_proper_javascript_snippit_for_default_tracker
     er = GA::EventRenderer.new(GA::Event.new('_someEvent', 1, 2, 3), nil)
     assert_equal("_gaq.push(['_someEvent',1,2,3]);", er.to_s)

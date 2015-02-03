@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class EventCollectionTest < Test::Unit::TestCase
+class EventCollectionTest < Minitest::Test
   def test_event_collection_raises_on_non_event_insertion    
     ec = GA::EventCollection.new
-    assert_raise(GA::EventCollection::InvalidEventError) { ec << "This is invalid" }
+    assert_raises(GA::EventCollection::InvalidEventError) { ec << "This is invalid" }
   end
   
   def test_event_collection_is_enumerable_and_iterates_in_insertion_order

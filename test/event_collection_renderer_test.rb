@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class EventCollectionRendererTest < Test::Unit::TestCase
+class EventCollectionRendererTest < Minitest::Test
   def test_event_collection_renderer_yield_proper_javascript_snippit_for_default_tracker
     event_collection = GA::EventCollection.new
     event_collection << GA::Event.new('event1', 1)
